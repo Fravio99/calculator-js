@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="calculator-container">
-    <input type="text" class="display" readonly>
-    <div class="buttons">
-        <button class="clear">C</button>
-        <button class="delete">DEL</button>
-        <button class="operator">/</button>
-        <button class="operator">*</button>
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <button onclick="clearDisplay()" class="clear">C</button>
+        <button onclick="deleteLast()" class="delete">DEL</button>
+        <button onclick="appendOperator('/')" class="operator">/</button>
+        <button onclick="appendOperator('*')" class="operator">*</button>
 
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="operator">-</button>
+        <button onclick="appendNumber('7')" class="nbr">7</button>
+        <button onclick="appendNumber('8')" class="nbr">8</button>
+        <button onclick="appendNumber('9')" class="nbr">9</button>
+        <button onclick="appendOperator('-')" class="operator">-</button>
 
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="operator">+</button>
+        <button onclick="appendNumber('4')" class="nbr">4</button>
+        <button onclick="appendNumber('5')" class="nbr">5</button>
+        <button onclick="appendNumber('6')" class="nbr">6</button>
+        <button onclick="appendOperator('+')" class="operator">+</button>
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="operator equal">=</button>
+        <button onclick="appendNumber('1')" class="nbr">1</button>
+        <button onclick="appendNumber('2')" class="nbr">2</button>
+        <button onclick="appendNumber('3')" class="nbr">3</button>
+        <button onclick="calculate()" class="operator equal">=</button>
 
-        <button class="zero">0</button>
-        <button>.</button>
-        <button>%</button>
-        <button>√</button>
+        <button onclick="appendNumber('0')" class="zero">0</button>
+        <button onclick="appendDot()" class="operator">.</button>
+        <button onclick="appendOperator('%')" class="operator">%</button>
+        <button onclick="squareRoot()" class="operator">√</button>
+      </div>
     </div>
-</div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
