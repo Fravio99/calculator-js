@@ -5,10 +5,12 @@ let secondNumber = "";
 let operator = "";
 let isSecondNumber = false;
 
+// @ts-ignore
 const display = document.getElementById("display");
 
 // Met à jour l'affichage
 function updateDisplay() {
+  // @ts-ignore
   display.value =
     firstNumber + (operator ? " " + operator + " " : "") + secondNumber;
 }
@@ -62,6 +64,7 @@ function squareRoot() {
   if (!isSecondNumber) {
     const num = parseFloat(firstNumber);
     if (isNaN(num) || num < 0) {
+      // @ts-ignore
       display.value = "Erreur";
       return;
     }
@@ -69,6 +72,7 @@ function squareRoot() {
   } else {
     const num = parseFloat(secondNumber);
     if (isNaN(num) || num < 0) {
+      // @ts-ignore
       display.value = "Erreur";
       return;
     }
@@ -98,6 +102,7 @@ function calculate() {
   let result;
 
   if (isNaN(num1) || (isSecondNumber && isNaN(num2))) {
+    // @ts-ignore
     display.value = "Erreur";
     return;
   }
@@ -110,6 +115,7 @@ function calculate() {
     result = num1 * num2;
   } else if (operator === "/") {
     if (num2 === 0) {
+      // @ts-ignore
       display.value = "Erreur : Division par 0";
       return;
     }
@@ -117,6 +123,7 @@ function calculate() {
   } else if (operator === "%") {
     result = num1 % num2;
   } else {
+    // @ts-ignore
     display.value = "Erreur";
     return;
   }

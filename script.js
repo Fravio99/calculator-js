@@ -1,3 +1,4 @@
+// @ts-ignore
 const display = document.querySelector("#display");
 
 function appendNumber(number) {
